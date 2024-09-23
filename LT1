@@ -1,0 +1,20 @@
+import numpy as np
+import matplotlib as plt
+from scipy.signal import butter,filtfilt
+pollution_data=np.array(1440)
+avg=np.mean(pollution_data)
+print("Average PM2 : ",avg)
+def low_pass_filter():
+    b, a = butter(5, 0.1)
+    filtered_pollution = filtfilt(b, a)
+for i in range(0, 1440, 60)]
+    hourly_averages = [np.mean(filtered_pollution)
+plt.figure(figsize=(10, 6))
+plt.plot(avg,marker='p', label='d')
+plt.title('PD')
+plt.xlabel('T')
+plt.ylabel('P')
+plt.xticks()
+plt.legend()
+plt.grid(True)
+plt.show()
